@@ -14,34 +14,48 @@ public class cryptProblem {
 		//main method to prompt the user to enter a string
 		Scanner scanner = new Scanner(System.in); // sets up a scanner to read the user's String value
 		System.out.print("Please enter a string that is divisable by 3:");
+		
 		String userCreatedStr = scanner.nextLine();//Takes the user's input and stores it in the userCreatedstr var
-		String name="PER";// String to compare the user's input with
-		
 		int userStrLength= userCreatedStr.length();//keeps track of the length of the user's string
-		int nameLength= name.length();//keeps track of "PER" length
 		int count=0;// variable to keep track of the number of changes needed in the user's string
-		String replaceString= userCreatedStr.replace(userCreatedStr, name);
 		
-		if (userCreatedStr.equals(name)) {// check to see if the user's input matches exactly without change
-			System.out.print("0");// Prints zero because no change is needed.
-		}
-		else
-			System.out.print(replaceString);
-			
-			//for(int i= 0; i<=userCreatedStr.length(); i++) {
-	//	String replaceString= userCreatedStr.replace(userCreatedStr, "PER");
-			//}
-			
-			//if (userCreatedStr.length()==name.length()) {
-				
-				
-			}
-		}
 	
-		
-			
-		
+		for(int i=0; i<=userCreatedStr.length()-1; i++) {// divides the string by 3 and checks to see if the first letter is p if not it increases the count
+				if(i%3==0 && userCreatedStr.charAt(i)!='P') {
+				  count++;
+				  
+				}
+				  
+					
+				  
+					if(i%3==0 && userCreatedStr.charAt(i+1)!='E') {//divides the string by 3 and checks to see if the first letter is E if not it increases the count
+						count++;
+					}
+				
+					
+					
+						if(i%3==0 && userCreatedStr.charAt(i+2)!='R') {//divides the string by 3 and checks to see if the first letter is R if not it increases the count
+							count++;
+						}
+				}
+						
+						
+					System.out.print(count);
 
+					
+						}
+				}
+			
+
+			
+			
+					
+					
+				
+
+	
+			
 	
 
 
+				
