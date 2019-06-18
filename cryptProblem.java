@@ -40,7 +40,7 @@ public class cryptProblem {
 				}
 						
 						
-					System.out.print(count);
+					System.out.print(count);//prints the total count of "days" it took to change the output to read PER until the end of the string
 
 					
 						}
